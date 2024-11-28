@@ -1,0 +1,194 @@
+:root {
+  --bgColor: white;
+  --textColor: black;
+  --shadowColor: rgba(0, 0, 0, 0.24);
+}
+
+.darkmode {
+  --bgColor: rgb(20, 20, 26);
+  --textColor: white;
+  --shadowColor: rgba(235, 252, 248, 0.24);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: poppins;
+  background: var(--bgColor);
+  transition: 1s;
+}
+nav {
+  text-align: right;
+  box-shadow: var(--shadowColor) 0px 3px 8px;
+  color: var(--textColor);
+  padding: 15px 0;
+}
+
+nav .darkModeBtn {
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+nav .darkModeBtn span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+
+nav .darkModeBtn span.sunIcon {
+  background-color: #f1c512;
+  transition: 0.3s;
+}
+
+.darkmode .darkModeBtn span.sunIcon {
+  margin-top: -40px;
+}
+
+nav .darkModeBtn span.moonIcon {
+  background-color: #060521;
+  color: white;
+}
+
+h1,
+p {
+  color: var(--textColor);
+}
+html, body{
+  cursor: none;
+}
+ol{
+  list-style-type: square;
+}
+.darkmode .cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgb(118, 118, 121);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.darkmode.cursorSm {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(114, 37, 37);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: 0.1s;
+}
+.cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgb(36, 36, 51);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cursorSm {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(114, 37, 37);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: 0.1s;
+}
+.faq {
+  max-width: 600px;
+  border: 1px solid #aaa;
+  margin: 10px 0;
+}
+.faq .faqHeader{
+  padding: 15px;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  justify-content: space-between;
+}
+.faq .faqHeader button{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  border: 1px solid coral;
+}
+.faq .faqBody{
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.faq .faqBody p{
+  padding: 15px;
+}
+.faq.active .faqBody{
+  max-height: 250px;
+  overflow: auto;
+}
+/* preLoader starts here */
+#preloader{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bgColor);
+}
+
+
+/* preLoader ends here */
+/* go to top starts here */
+.backToTop{
+  position: fixed;
+    right: 50px;
+    bottom: 50px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bgColor);
+    border-radius: 50%;
+    color: var(--textColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* go to top ends here */
+/* nav fixed */
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--bgColor);
+}
